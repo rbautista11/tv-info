@@ -1,0 +1,13 @@
+#output {
+  color: red;
+}
+body {
+  min-width:350px;
+}
+.poster, .title {
+  float: left;
+}
+
+.clearfix {
+  clear:both
+}
