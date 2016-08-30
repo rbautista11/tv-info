@@ -7,6 +7,9 @@ chrome.tabs.executeScript( {
       console.log(id);
       getPoster(id, function(posterSource) {
         document.getElementById("posterImage").src = posterSource;
+        getSummary(id, function(overview) {
+          document.getElementById("overview").innerHTML = overview;
+        });
       });
     });
 });

@@ -1,5 +1,4 @@
 
-
 function findID(input, callback) {
   var request = new XMLHttpRequest();
   var query = 'https://api.trakt.tv/search/show?query=' + input;
@@ -48,10 +47,10 @@ function getPoster(id, callback) {
   request.send();
 }
 
-function getSummary(id) {
+function getSummary(id, callback) {
   var request = new XMLHttpRequest();
-
-  request.open('GET', 'https://api.trakt.tv/shows/game-of-thrones');
+  var query = 'https://api.trakt.tv/shows/' + id + '?extended=full';
+  request.open('GET', query);
 
   request.setRequestHeader('Content-Type', 'application/json');
   request.setRequestHeader('trakt-api-version', '2');
@@ -63,6 +62,8 @@ function getSummary(id) {
       console.log('Status:', this.status);
       console.log('Headers:', this.getAllResponseHeaders());
       console.log('Body:', this.responseText);
+      var obj = JSON.parse(this.responseText);
+      callback(obj.overview);
     }
   };
   request.send();
