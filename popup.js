@@ -11,6 +11,7 @@ chrome.tabs.executeScript( {
       getPoster(id, function(posterSource) {
         document.getElementById("posterImage").src = posterSource;
         getSummary(id, function(title, rating, runtime, network, year, overview) {
+          rating = +rating.toFixed(2);
           document.getElementById("title").innerHTML = title;
           document.getElementById("rating").innerHTML = "Rating: " + rating;
           document.getElementById("runtime").innerHTML = "Runtime: " + runtime + " min";
