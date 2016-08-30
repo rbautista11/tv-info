@@ -1,10 +1,7 @@
-#output {
-  color: red;
-}
 body {
   min-width:350px;
 }
-.poster, .title {
+.poster, .info {
   float: left;
 }
 

@@ -63,7 +63,7 @@ function getSummary(id, callback) {
       console.log('Headers:', this.getAllResponseHeaders());
       console.log('Body:', this.responseText);
       var obj = JSON.parse(this.responseText);
-      callback(obj.overview);
+      callback(obj.title, obj.rating, obj.runtime, obj.network, obj.year, obj.overview);
     }
   };
   request.send();
