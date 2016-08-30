@@ -8,4 +8,4 @@ extension, using the TraktTV API, in order to quickly get a description about a
 show to see if it is interesting enough to further investigate.
 
 Screenshot:
-![Screenshot](/images/tv-info.png?raw=true)
+![Screenshot](/images/tv-info.PNG?raw=true)
