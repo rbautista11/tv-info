@@ -1,10 +1,24 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  color: #dde0de;
+  background-color: #1d1f21;
+}
+p {
+  font-size: 12.5px;
+}
 body {
   min-width:350px;
 }
-.poster, .info {
+
+div.poster {
   float: left;
+  padding-right: 10px;
 }
 
-.clearfix {
-  clear:both
+div.title {
+  text-align: center;
+}
+
+div.clearfix {
+  clear: both;
 }
